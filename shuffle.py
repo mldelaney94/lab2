@@ -10,9 +10,13 @@ provided list
 
 user_list = input("Put a few comma separated characters\n").split(',')
 
-
 def shuffle(li):
-    # TODO
-    pass
+    i=0
+    while i < len(li)*2:
+        x = random.randint(0, len(li)-1)
+        y = random.randint(0, len(li)-1)
+        li[x], li[y] = li[y], li[x]
+        i+=1
+    return li
 
 print(shuffle(user_list))
