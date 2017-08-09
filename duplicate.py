@@ -19,7 +19,6 @@ sentence = input()
 # Define this function to return the expected output
 # Do not print it from this function
 def singlify(str):
-    # TODO
     words = str.split()
     words.sort()
 
@@ -27,6 +26,7 @@ def singlify(str):
     while i < len(words)-1:
         if words[i] == words[i+1]:
             del (words[i])
+            i-=1
         i+=1
     uniq = " ".join(words)
     return uniq
